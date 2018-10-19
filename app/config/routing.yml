@@ -1,3 +1,9 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+# the Symfony router needs to know the routes provided by the SonataAdminBundle. 
+# You can do this by importing them in the routing configuration:
+admin_area:
+  resource: "@SonataAdminBundle/Resources/config/routing/sonata_admin.xml"
+  prefix: /admin
